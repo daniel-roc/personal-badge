@@ -22,17 +22,21 @@
             <img src="images/build.svg" alt="Selo Rocketseat" />
           </span>
           <img
+            id="userAvatar"
             src="https://lorempixel.com/185/185/people/"
             alt="Foto pessoal"
           />
         </div>
 
         <h1 id="userName">Mayk Brito</h1>
-        <a href="https://github.com/daniel-roc" target="_blank"
-          ><img src="images/github.svg" alt="ícone github" />maykbrito</a
+        <a id="userLink" href="https://github.com/maykbrito" target="_blank"
+          ><img src="images/github.svg" alt="ícone github" />
+          <span id="userLogin">maykbrito</span></a
         >
 
-        <p>An instructor focused on helping pople start programming for web</p>
+        <p id="userBio">
+          An instructor focused on helping pople start programming for web
+        </p>
 
         <ul id="socialLinks">
           <li class="youtube">
@@ -59,23 +63,6 @@
       </div>
     </main>
 
-    <script>
-      const linksSocialMedia = {
-        github: 'daniel-roc',
-        youtube: 'maykbrito',
-        facebook: 'daniel.rochalves',
-        instagram: 'danielroocha',
-        twitter: 'DanAlRoc'
-      }
-
-      function changeSocialMediaLinks() {
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
