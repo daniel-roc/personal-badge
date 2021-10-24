@@ -27,31 +27,31 @@
           />
         </div>
 
-        <h1>Daniel Rocha</h1>
+        <h1 id="userName">Mayk Brito</h1>
         <a href="https://github.com/daniel-roc" target="_blank"
-          ><img src="images/github.svg" alt="ícone github" />daniel-roc</a
+          ><img src="images/github.svg" alt="ícone github" />maykbrito</a
         >
 
         <p>An instructor focused on helping pople start programming for web</p>
 
-        <ul>
-          <li>
-            <a href="https://youtube.com/" target="_blank"
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="https://youtube.com/maykbrito" target="_blank"
               ><img src="images/youtube.svg" alt="ícone youtube"
             /></a>
           </li>
-          <li>
-            <a href="https://facebook.com/" target="_blank"
+          <li class="facebook">
+            <a href="https://facebook.com/maykbrito" target="_blank"
               ><img src="images/facebook.svg" alt="ícone facebook"
             /></a>
           </li>
-          <li>
-            <a href="https://instagram.com/" target="_blank"
+          <li class="instagram">
+            <a href="https://instagram.com/maykbrito" target="_blank"
               ><img src="images/instagram.svg" alt="ícone instagram"
             /></a>
           </li>
-          <li>
-            <a href="https://twitter.com/" target="_blank"
+          <li class="twitter">
+            <a href="https://twitter.com/maykbrito" target="_blank"
               ><img src="images/twitter.svg" alt="ícone twitter"
             /></a>
           </li>
@@ -60,11 +60,7 @@
     </main>
 
     <script>
-      function showMeSomething(texto) {
-        alert(texto)
-      }
-
-      const links = {
+      const linksSocialMedia = {
         github: 'daniel-roc',
         youtube: 'maykbrito',
         facebook: 'daniel.rochalves',
@@ -72,7 +68,14 @@
         twitter: 'DanAlRoc'
       }
 
-      showMeSomething('amigo estou aqui')
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+        }
+      }
+
+      changeSocialMediaLinks()
     </script>
   </body>
 </html>
