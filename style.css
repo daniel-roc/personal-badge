@@ -92,4 +92,22 @@ ul {
 }
 
 @media (min-width: 960px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  main {
+    background: black url(images/background_desktop.svg) no-repeat center/cover;
+    width: 100vw;
+    min-height: 820px;
+    height: 100vh;
+  }
+
+  .container {
+    margin-top: 214px;
+  }
+
+  ul {
+    margin-top: 2.5rem;
+  }
 }
