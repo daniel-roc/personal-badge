@@ -10,6 +10,7 @@ body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
+  background-color: black;
 }
 
 body {
@@ -88,19 +89,20 @@ ul {
   justify-content: center;
 }
 
-@media (min-width: 720px) {
-}
-
-@media (min-width: 960px) {
+@media (min-width: 420px) {
   body {
     overflow-x: hidden;
   }
 
   main {
     background: black url(images/background_desktop.svg) no-repeat center/cover;
+    max-width: 1440px;
     width: 100vw;
+    max-height: 820px;
     min-height: 820px;
     height: 100vh;
+    position: absolute;
+    top: 0;
   }
 
   .container {
